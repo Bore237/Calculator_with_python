@@ -1,0 +1,61 @@
+//////////////// Configurer le repository  /////////////
+configurer le git avec: git config --global user.name  "nom"
+						git config --global user.email "email"
+						git config --global color.diff  auto
+						git config --global color.status auto
+						git config --global color.branch auto
+						git config --global --list 
+
+///////////////////// Operation sur github  ///////////////
+Creer un repository sur github
+creer un dosiier en local sur la machine  ///////////
+Ouvrir le dossier avec git bash
+
+////////////////// Ecrire les commandes
+puis entrer les commande:
+			- git init
+			- git status
+			- git remote -vvv (voir les remote en local)
+			///////////// Ajouter les fichier dans le repertoire index ///////
+			- git add . ou git add file.extension (il faut au prealable avoir créér des fichiers)
+			- git status (voir etat des fichiers)
+			//////////// Ajouter les fichier dans le depot local ///////
+			- git commit -m "first load" (mettre un bon commentaire pour mettre le sur une branche git)
+			- git remote add origin(nom) https://github.com/Bore237/Calculator_with_python.git
+			- git branch -m main (choisir la branche)
+			- git push -u origin master (non branche)
+			- entrer le non utilisateur et le mot de passe sera le token
+
+////////// Retirer les fichier dans index ////////////
+On tape la commande:
+			- git reset nom.extension
+
+////////// Voir les modification apportées a un fichier  ////////////
+On tape la commande: pour voir le modification dans notre repertoire courant
+			- git diff (nom des fichiers donc on veut avoir les modifications)
+			- git diff (affiche toute les modifications par rapport a la dernier version enregistrer )
+			
+On tape la commande: pour voir le modification dans notre notre repertoire index
+			- git diff --cached (nom des fichiers donc on veut avoir les modifications)
+			- git diff --cached (affiche toute les modifications par rapport a la dernier version enregistrer )
+			
+			
+////////// Gestion des branchs //////////////////
+les commande git relative au branch sont:
+			- git branch (list tous les brancs)
+			- git branch nom_branch (créer une branche)
+			- git checkout nom_branch (choisir une branch)
+			
+			-git switch -c 'nom_branch'
+			
+
+////////// Cloner un projet ///////////
+			- git clone URL
+			- git remote add origin URL 
+			- git pull nom_remote namebranch
+
+///////// debuger ///////////
+			- git log (voir tout les dernier operation)
+
+/////////////// Token ///////////////////////
+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 : Firt Token
