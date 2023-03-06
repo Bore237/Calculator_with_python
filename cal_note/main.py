@@ -5,5 +5,5 @@ from fonction import *
 ########## Main  Function ###################
 
 data = enterLesDonnees() 
-afficherMoyenne(calculMoyenne(data))
+afficherMoyenne(calculMoyenne(data)) 
 print(data)
