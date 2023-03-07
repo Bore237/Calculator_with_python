@@ -55,7 +55,7 @@ Les fonction usuelle sur python:
 
 //////////////////////////// Tuple ///////
 
-tupl = (1, 3, 5, 8) il sont incgergeable 
+tupl = (1, 3, 5, 8) il sont interchangeable 
 var = turple[1] accédé a élément 1 de la tuple
 
 //////////////////////////// Ensemble /////
@@ -68,3 +68,101 @@ set1 = {12, hello, 52}  il ne sont pas dupicable, et on peut ajouter les element
  
 Un dictionnaire a une clé et une valeur: Ex (dict1 = {1:'one'}, 2:'two', 3: 'trois')
 les clés sont  a gauche et la valeur a droite.  Il ne sont pas dupicable
+
+
+
+///////////////////////////////////// Class in python ///////////////////////////////////
+- Une class est comme le plan d'une maison donc sans plan pas de maison de meme sans class pas de objet
+- Une class permet de créé plusieur objects. pour cela on condition des attribuit(sa fonction, nom etc) et methode()
+- Ensemble d'utilisation d'un objects
+	- class Computer:
+		def config(self):
+			code
+	- comps = Computer() (on créer object comps  donc comps est une instance de la class computer)
+	- pour utiliser config avec mon object comps on ecrit : Computer.config(comps) ou comps.config
+
+#----- Method init__(self) (constructeur)
+- La methode init est le constructeur d'un object il s'appel automatiquement lorsque on créér un object
+- self est un object qui contient  tout les attribut de notre class et est le premier paramètre de tout nos méthodes
+- 	- class Computer:
+		def __init__(self, CPU=1, ROM="520gb", RAM="2g"):
+			self.CPU = CPU
+			self.ROM = ROM
+			self.RAM = RAM
+			
+		def config(self):
+			print(self.CPU, etc)
+			
+#----- Types de varible er methode en programmation orienetr objet: python
+- prenons le script ci dessous
+	- class Etudiant:
+		nom_etablissement = "school borel "
+	
+		def __init__(self, nom="RAS", classe="SIL", matricule= 1):
+			self.nom = nom
+			self.classe = classe
+			self.matricule = matricule
+			
+- on' a deux types de variable (instance et classes)
+	------- Variables de classes ou variable statique: Est une variable qui est la meme a chque object. sont les variables qui sont utilisé dans toute la classe dans notre cas ils agit de la variable(nom_etablissement)
+	car sa sert a rien de la modifier cas tous les etudiants frequente meme etablissement. pour avoir assert hor de la class on fait:
+			-- Créons un object voyont comment sa marche: Student1 = Etudiant("borel", "CMI, 25)
+			pour voir sont etablisement on écrit:         print(Student1.nom_etablissement) ou print(Etudiant.nom_etablissement) 
+	------- Variable d'intance: ce sont les variables avec le mot clés self pour les utilisés on ce sert des getteur et setteur
+	
+- on'a type de methodes(instance, classes, statique): 
+	------- Methode d'intance: est une méthode qui utilise les varible d'instance et a deux sous méthodes d'instance 
+	ces méthodes s'appelle: Accesseurs(avoir la valeur) et les mutables(Modifier sa valeut):
+	--Exemple d' Accesseurs:  def get_name(self): (avoir le nom)
+								return self.name
+	--Exemple de Mutable :  def set_name(self, value): (avoir le nom)
+								self.name = value
+	--Utilisation : 					Student1 = Etudiant("borel", "CMI, 25) 
+	Pour changer le non de etudiant:	Student1.set("Borel")
+	
+	------ Methode de classe: est une méthode qui utilise les varible de class et pour utiliser il faut le mot clé (@classmethod(decodeur) et clc)
+	-- Exemple d'implementation:  @classmethod
+								  def getNomEtablissement(cls):
+									return cls.schoolName
+	
+	------ Methode de statique: est une méthode qui qui ne prend aucun paramètre, ne fiat fiat aucun clacul et ne donne que les information il faut metre le decodeur @classmethod
+	-- Exemple d'implementation:  @staticmethod
+								  def info():
+									print("information ")
+
+#----- Les class intérieur et les class extérieurs: il est possible d'implementer une class dans une autre class cette class sera une class intérieur 
+	--implementation:  class Students:
+							def __init__(self, val):
+								self.val = val ....
+								self.vam = self.classInterieur
+								
+							class Computer :
+								def __init__(self, val, Eval(class exterieur))
+									self.val = val
+									self.val = Eval
+									
+							def generalInfo(self):
+								#on peut utiliser cette class comme une variable
+								print(self.machine('Ronald', 'CMR2', 2)
+									
+	-- Utilsation    Students2 = Students("Donald","CM1, 2)
+					objclassExt.non_classInt(8, 2.5, 'HP', objclassExt.get_name()).methodclassInterrieur()
+					
+#_____ L'héritage des class en python
+	--Nous avons plusieur type d'héritage: simple(B---->A), plusieur niveau(C---->B---->A), multiple heritage (C----> B && C---->A)
+		-- Héritage simple syntax: class A:                     	class B(A):
+										def feature1(self):				def __init__
+				
+		-- Héritage a plusieur niveau: 	class A:                     	class B(A):           		class C(B):
+											def feature1(self):				def feature2(self)			def feature3(self)									
+
+		-- Héritage a multiple: 		class A:                     	class B:           			class C(A, B):
+											def feature1(self):				def feature2(self)			def feature3(self)												
+					
+					
+#----- L'encaspulation des class en python:
+	--Un class est encaspulationlosque tout c'est attribut sont sont privé et les methode public. Un attribu privé n'est visible
+	seulement a l'intérieur de la classs qui utilise.
+	-- Pour declarer un attribut private sur python on possède comme: (self.__nonattribut = val(pour les attribut instancier )et		
+																		__nonattributclass = val (pour les attribut de type class)
+	--Comme c'est n'est utilisable que a intérieur de la class le seul moyen pour le modifier est d'utiliser les Accesseurs(avoir la valeur) et les mutables

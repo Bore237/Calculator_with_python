@@ -35,6 +35,9 @@ def standard():
 #------------------------  Design des menus --------------------
 menubar =Menu(calculator)
 filemenu = Menu(menubar, tearoff=0)
+
+#------------------------ Calculator Logical -------------------
+
 #------------------------ Entry information --------------------
 
 txtDisplay = Entry(calculator, font=('arail', 20, 'bold'), 
