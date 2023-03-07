@@ -1,0 +1,70 @@
+Les fonction usuelle sur python:
+- a = round(number)
+- a = round(number, nombre chiffre après la vigurle)
+- print (function) pour avoir de aide
+- a = divmod(nombre, diviseur) renvoir le cocient et le reste de la division 
+- a = isinstance(12, (float, int, str)) retourne vrai ou faux 
+- pow(nombre, exposant)
+- a= type(input("entrer un nombre")) recoit les données de type string si on ce spécifie rien
+- range(x,y,z) x (debut,fin,pas) par du nombre donné jusqu'a -1 ce nombre
+
+- 	for var in ensemble (var = {} on peut pas ce repeter)
+
+	else:
+	
+- 	for key in dic (var = {} on peut pas ce repeter)
+		key (contient les clés)
+		dic[key] avoir la valeur
+	else:
+	
+- doc = nom.__doc__
+
+- def function(*args) //Entrer les element a volonté donc une liste
+	for i in range(len(args))
+	
+- def function(**args) //Entrer les element a volonté donc une dictionnaire
+	for x in args
+		args[x] le contenue du titre x
+		
+- pour retirer anti slash on utilise r"C\jjj"
+- concatenation (m t + "  " + s)
+- convertir int en string  (a = str(int_number))
+- ecrire un long text : text = """
+						Pharse
+						pharse 
+						"""
+
+- t [debut:fin:part]  //pour extraire les listes 
+	- s.upper () , s.lower()  majuscule et numérique
+	- s.replace("  ", "**") , s.split(" ")  créer une list la ou il y'a les expace
+	
+///////////////////////////////// List ///////	
+
+- adrese = id(My_list) avoir adresse
+- une liste peut etre un element d'une liste 
+- les elements d'une liste son indessable, interchangeable (My_list = [1, 2, 34, 45])
+- on peut additioner plusieur list (My_list = My_list + My_list)
+- on peut suprimer un element d'une liste del My_list[index]
+- on peut ajouté un element dans une liste My_list.append('element')
+- on peut retirer un element dans une liste My_list.remove('element')
+- on peut suprimer tout les elements de la liste My_list.clear()
+- My_list.sort()
+- My_list.reverse()
+- List1 =  List.copy()
+- Egaliser les liste c'est interdir
+
+//////////////////////////// Tuple ///////
+
+tupl = (1, 3, 5, 8) il sont incgergeable 
+var = turple[1] accédé a élément 1 de la tuple
+
+//////////////////////////// Ensemble /////
+
+set1 = {12, hello, 52}  il ne sont pas dupicable, et on peut ajouter les elements et les retirer
+ il ne sont pas indessable
+ 
+ 
+ ///////////////////////// Dictionnaire   ///////////////////////////////
+ 
+Un dictionnaire a une clé et une valeur: Ex (dict1 = {1:'one'}, 2:'two', 3: 'trois')
+les clés sont  a gauche et la valeur a droite.  Il ne sont pas dupicable

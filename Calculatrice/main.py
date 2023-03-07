@@ -12,7 +12,7 @@ root = Tk()
 root.title("scientific calculator")
 root.configure(background="powder blue")
 root.resizable(width=False, height=False)
-root.geometry("485x568+200+2")
+root.geometry("485x568+0+0")
 
 calculator = Frame(root)
 calculator.grid()
@@ -37,11 +37,51 @@ menubar =Menu(calculator)
 filemenu = Menu(menubar, tearoff=0)
 #------------------------ Entry information --------------------
 
-txtDisplay = Entry(calculator, font=('arail', 20, 'bold'), bg="powder blue", bd=30, width=28, justify=RIGHT)
+txtDisplay = Entry(calculator, font=('arail', 20, 'bold'), 
+                   bg="powder blue", bd=30, width=28, justify=RIGHT)
 txtDisplay.grid(row=0, column=0, columnspan=4, pady=1)
 txtDisplay.insert(0, "0")
 
-numberstd = "789456123"
+
+#------------- Innsert standard keyboad ---------------------
+numberstd = "789-456*123+"
+btn = []
+i=0
+for j in range(2, 5):
+    for k in range(4):
+        btn.append(Button(calculator, width=5, height=2, font=('arail', 20, 'bold'),
+                          bd =4, text=numberstd[i]))
+        btn[i].grid(row=j, column=k, pady=1)
+        i+=1
+        
+btnClear = Button(calculator,text=chr(67),  width=5, height=2, font=('arail', 20, 'bold'),
+                bd =4, bg="powder blue").grid(row=1, column=0, pady=1)
+btnAllClear = Button(calculator,text=chr(67)+chr(69),  width=5, height=2, font=('arail', 20, 'bold'),
+                bd =4, bg="powder blue").grid(row=1, column=1, pady=1)
+btnsq = Button(calculator,text=chr(8730)+chr(69),  width=5, height=2, font=('arail', 20, 'bold'),
+                bd =4, bg="powder blue").grid(row=1, column=2, pady=1)
+btnAdd = Button(calculator,text="+",  width=5, height=2, font=('arail', 20, 'bold'),
+                bd =4, bg="powder blue").grid(row=1, column=3, pady=1)
+btnASub = Button(calculator,text="-",  width=5, height=2, font=('arail', 20, 'bold'),
+                bd =4, bg="powder blue").grid(row=2, column=3, pady=1)
+btnMul = Button(calculator,text="*",  width=5, height=2, font=('arail', 20, 'bold'),
+                bd =4, bg="powder blue").grid(row=3, column=3, pady=1)
+btnDiv = Button(calculator,text=chr(247),  width=5, height=2, font=('arail', 20, 'bold'),
+                bd =4, bg="powder blue").grid(row=4, column=3, pady=1)
+
+btnZero = Button(calculator,text="0",  width=5, height=2, font=('arail', 20, 'bold'),
+                bd =4, bg="powder blue").grid(row=5, column=0, pady=1)
+btnPoint = Button(calculator,text=".",  width=5, height=2, font=('arail', 20, 'bold'),
+                bd =4, bg="powder blue").grid(row=5, column=1, pady=1)
+btnPM = Button(calculator,text=chr(177),  width=5, height=2, font=('arail', 20, 'bold'),
+                bd =4, bg="powder blue").grid(row=5, column=2, pady=1)
+btnPM = Button(calculator,text="=",  width=5, height=2, font=('arail', 20, 'bold'),
+                bd =4, bg="powder blue").grid(row=5, column=3, pady=1)
+
+
+
+
+
 #------------- Menu Fichier ------------------------------------ 
 menubar.add_cascade(label="fichier", menu=filemenu)
 filemenu.add_command(label = "standard", command = standard)
