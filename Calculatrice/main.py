@@ -23,15 +23,29 @@ def quitter():
     if quitter > 0:
         root.destroy()
         return
+
+def scientifique():
+    root.resizable(width=False, height=False)
+    root.geometry("944x568+0+0")
+    
+def standard():
+    root.resizable(width=False, height=False)
+    root.geometry("944x568+0+0")
     
 #------------------------  Design des menus --------------------
 menubar =Menu(calculator)
 filemenu = Menu(menubar, tearoff=0)
+#------------------------ Entry information --------------------
 
+txtDisplay = Entry(calculator, font=('arail', 20, 'bold'), bg="powder blue", bd=30, width=28, justify=RIGHT)
+txtDisplay.grid(row=0, column=0, columnspan=4, pady=1)
+txtDisplay.insert(0, "0")
+
+numberstd = "789456123"
 #------------- Menu Fichier ------------------------------------ 
 menubar.add_cascade(label="fichier", menu=filemenu)
-filemenu.add_command(label = "standard")
-filemenu.add_command(label="scientific")
+filemenu.add_command(label = "standard", command = standard)
+filemenu.add_command(label="scientific", command = scientifique)
 filemenu.add_separator()
 filemenu.add_command(label="Quitter", command = quitter)
 
