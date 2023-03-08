@@ -165,4 +165,19 @@ les clés sont  a gauche et la valeur a droite.  Il ne sont pas dupicable
 	seulement a l'intérieur de la classs qui utilise.
 	-- Pour declarer un attribut private sur python on possède comme: (self.__nonattribut = val(pour les attribut instancier )et		
 																		__nonattributclass = val (pour les attribut de type class)
-	--Comme c'est n'est utilisable que a intérieur de la class le seul moyen pour le modifier est d'utiliser les Accesseurs(avoir la valeur) et les mutables
+	--Comme c'est n'est utilisable que a intérieur de la class le seul moyen pour le modifier est d'utiliser 
+	les Accesseurs(avoir la valeur) et les mutables
+	
+	
+	////////////////////////////// Notion de polymonphisme //////////////////////////////
+	C'est concepte qui veut que bien que on'a le meme nom on peut avoir les comportement différent. 
+		--Duck Typing: 
+		
+		--La surcharge d'operateur: c'est récréér une fonction qui esciste pour augmenter des choses. Permet de faire les operation 
+		comme adition des class et bien d'autre (soustration , multiplication) (__add__, __mul__ etc)
+		
+		--La surcharge de méthode: C'est forcer le fonctionnement de base d'une méthode. donc liées plusieur methode en une. Prenons
+		le cas ou on veut additioner avec une meme function 2 nombre et 3 nombre sans générer d'erreur on dira que on sur charge cette méthode
+		--Le  methode primordial: c'est récrire une fonction mère dans une fonction fille pour avoir plus de fonction.
+	
+	
